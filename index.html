@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design</title>
+
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./javas.js"></script>
+
+    <script src="https://kit.fontawesome.com/69ccce74ed.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <div class="notification">
+        <p>🔥 Get 650+ Tech Books and Courses for <span>$3/m for 3 months</span></p> 
+        <button onclick="hide_noti()"><i class="fa-solid fa-xmark"></i></button>
+        <a href="#">See Collection</a>
+    </div>
+    <div class="nav">
+        <div class="fs-site">
+            <div class="fs-box">
+                <div class="left">
+                    <a href="#home">
+                        <i class="fa-brands fa-css3"></i>
+                        <span>sitepoint</span>
+                    </a>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Discord</a></li>
+                        <li><a href="">Forum</a></li>
+                        <li><a href="">Library</a></li>
+                        <li><a href="">Login</a></li>
+                        <li><a href="">Join Premium</a></li>
+                    </ul>
+                </div>
+                <div class="menu-icon">
+                    <button onclick="switchDropdownList()"><i class="fa-solid fa-bars"></i></button>
+                </div>
+            </div> 
+        </div>
+        <div class="dropdown--list">
+            <div class="dropdown-box">
+                <input type="text" placeholder="Search articles...">
+                <ul>
+                    <li><a href="">Blog</a></li>
+                    <ul>
+                        <li><a href="">JavaScript</a></li>
+                        <li><a href="">Computing</a></li>
+                        <li><a href="">Design & UX</a></li>
+                        <li><a href="">HTML & CSS</a></li>
+                        <li><a href="">Entrepreneur</a></li>
+                        <li><a href="">Web</a></li>
+                        <li><a href="">PHP</a></li>
+                        <li><a href="">WordPress</a></li>
+                        <li><a href="">Mobile</a></li>
+                        <li><a href="">Programming --></a></li>
+                    </ul>
+
+                    <li><a href="">Discord</a></li>
+                    <li><a href="">Forum</a></li>
+                    <li><a href="">Library</a></li>
+                    <li><a href="">Login</a></li>
+                    <li><a href="">Join Premium</a></li>
+                </ul>
+            </div> 
+        </div>
+        <div class="navlink">
+            <div class="navlink-box">
+                <ul>
+                    <li><a href="#">JavaScript</a></li>
+                    <li><a href="#">Computing</a></li>
+                    <li><a href="#">Design & UX</a></li>
+                    <li><a href="#">HTML & CSS</a></li>
+                    <li><a href="#">Entrepreneur</a></li>
+                    <li><a href="#">Web</a></li>
+                    <li><a href="#">PHP</a></li>
+                    <li><a href="#">WordPress</a></li>
+                    <li><a href="#">Mobile</a></li>
+                    <li><a href="#">Programing</a></li>
+                    <li><button onclick="showSearchBar()"><i class="fa-solid fa-magnifying-glass"></i></button></li>
+                </ul>
+            </div>  
+
+            <div class="search">
+                <input type="text" id="searchBar" placeholder="Search articles...">
+                <button onclick="backToNavlink()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <div class="main-box">
+            <a href=""><h3>Mobile</h3></a>
+            <h1>Responsive Web Design: Using Fronts Responsively</h1>
+            <a href="#">Mobile Web Development</a>
+            <a href="#">Responsive Web Design</a>
+            <div class="info_box">
+                <div class="author">
+                    <img src="./images/author-img.jpg" alt="author-img">
+                    <div class="info">
+                        <p><a href="#">Annarita Tranfici</a></p>
+                        <p>January 18, 2013</p>
+                    </div>
+                </div>
+                <div class="info_link">
+                    <span>Share</span>
+                    <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-discord"></i></a>
+                    <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                    <a href=""><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="summary">
+                <p>Typography is one of the most important aspects of responsive web design, and optimizing your fonts for mobile devices is an absolute
+                    necessity if you want your content to be palatable across all screen sizes. Fortunately, the process of building flexible fonts is not
+                    very difficult. When we talk about flexibility (which is the guiding principle in this case), we cannot overlook the specified size 
+                    of the font we've chosen to adapt for our responsive website. We may use different metrics for this purpose, including pixels, ems,
+                    rems, or percentages. Choosing the right metric is critical for designing a malleable, responsive interface.
+                </p>
+                <p>In this continuation on responsive web design, I'll explain how to manage dynamic fonts reponsively, and I'll analyze all of the 
+                    aforementioned metrics, comparing the strength and weaknesses of each choice.
+                </p>
+            </div>
+            <section>
+                <h3>Pixels</h3>
+                <p>For a long time, pixel have been the unit preferred of web designer due to its inherent precision and accuracy. Once the pixel value is 
+                    chosen for the font, the type size will remain exactly across all devices and browsers. While that approach offers very precise control,
+                    it's contrary to our need for flexibility and responsiveness.
+                </p>
+                <p>As most reader already know, when you set the dimensions for a "parent" items, they will be automatically applied to any "child" elemenent
+                    via inheritance. (That's why they named CSS "cascading" stylesheets.) For example, setting a fixed pixel value to they body's font-size 
+                    will permeate nearly all other elements of your design. When the developer wants to assign different style declarations to each individual
+                    element of the page, he or she will have to set different parameters manually to override existing styles.
+                </p>
+                <p>As a result, basic edits and adjustments will require meticulous modifications to all of the previous settings. This is far more than just
+                    inconvenient; it can lead to serious accessibility problems in a variety of browsers and devices, many of which interfere with deliberate
+                    choices of font size. Some visitors may have difficulties reading text below a certain size and this should be absolutely avoided,
+                    especially considering our main goal of making a responsive design that works with all screen sizes and eyeballs involved.
+                </p>
+                <p>If you take a forward-thinking approach to your designs, the option of assigning rigid pixel values as your font sizes doesn't seem to be 
+                    the best choice. Today, devices have different screen sizes, as well as different pixel densities. Serving a one-size-fits-all font size 
+                    to this huge range of products is contrary to our responsive approach.
+                </p>
+            </section>
+            <section>
+                <h3>Ems</h3>
+                <p>Let's continue by considering ems. An em is the equivalent of the size (in pixels) defined in the CSS rule font-size. For example, if we 
+                    build a <span>&lt;div&gt;</span> and include text with a font-size of 16 pixels, 1 em will correspond to 16 pixels, 2 em to 32 pixels, and 
+                    so on. Ems are resizeable in all browsers, and it's not necessary to set the value for each element, because in this case, the rule can be 
+                    applied to the "parent" element and automatically to its respective "child" elements via the cascading process.
+                </p>
+                <p>Obviously, working with ems involves pros and cons to consider. Although they make the maintenance of a site's type easier (because, as 
+                    mentioned before, all the changes will automatically apply to the whole content), this could hinder a developer who is seeking control, 
+                    precision, and predictability with their fonts. Luckily, the problem can be easily solved by using the same measurement units for the most
+                    of the content, scaling only a few text elements such as the <span>header</span> or <span>footer</span>
+                </p>
+            </section>
+            <section>
+                <h3>Percentages</h3>
+                <p>Just like ems, percentages are resizeable units for font size, and their CSS declarations can be inherited. Theoretically, there isn't a big 
+                    difference between percentages and ems; they're both malleable units of measurement. What's just as important as understanding the differences
+                    (however slight they may be) between ems and percentages is being decisive about which unit of measurement you are going to use throughout
+                    your design. You certainly don't want to use ems for certain elements of your design and percentages for other. One way to rule our percentages 
+                    is to simply make the following sitewide CSS declaration.
+                </p>
+                <p style="color: #fff;background-color:rgb(41,45,62); width:100%;border-radius:5px;padding:10px;font-weight:500;letter-spacing: 2px;margin-bottom: 20px;">&#123 font-size:100%;  &#125</p>
+                <p>This effectively overrides any browser defaults or other unwanted percentage declarations, and leaves the font sizing up to other methods and 
+                    metrics. In this case, the content could be sized using ems.
+                </p>
+            </section>
+            <section>
+                <h3>Rems</h3>
+                <p>Some of you may not be aware that there is another option that provides flexibility in font sizing: the rem unit ("root Em"). Its behavior is 
+                    similar to that of the aforementioned em unit with one important difference: Its value is relative to the root element of the document (in 
+                    HTML, that's the <span>&lt;html&gt;</span> element) and not to any the other elements associated to it. This important difference makes it
+                    possible to solve many problems that occur with nested elements. And, as most designer knows, the vast majority of their design inherently
+                    consists of nested elements; like humans, nearly every one of them has a "parent" somewhere and inherits certain qualities from them.
+                </p>
+                <p>However, it's important to note that rems are a very new unit, and therefore not all desktop browsers will support them, interpret them, or 
+                    display them correctly. For now, at least.
+                </p>
+            </section>
+            <section>
+                <h3>Conclusions</h3>
+                <p>Having explored the various measurement options for your fonts, what is the best way to approach your type in terms of responsive web design?
+                </p>
+                <p>Surely, ems make font scaling easier and website maintenance substantially easier. If you decide, for example, to increase the font-size using
+                    percentages, you'll simply have to change the percentage applied to the body and nothing else. Maintenance is actually a large problem that's 
+                    worthy of serious consideration in your design. It would be nice to ignore routine, everyday aspects like ease of maintenance and simplicity of 
+                    stylesheets and focus entirely on aesthetics and functionality. But, outside of a blue-sky planning process, a good designer will give significant 
+                    consideration and priority to utility and pragmatism.
+                </p>
+                <p>First, you must convert all elements with a fixed size into something that ensures higher fluidity. Second, you should always keep in mind the 
+                    proportions of the elements of the page and implement careful changes so that these propotions are preserved. We'll see later in the series, with 
+                    some example, a practical application of all the principle responsive web design that we're describing in these articles. It's important to 
+                    understand the basic methodologies of these techniques first. In the next post, we'll move on to fluid layout and how you can combine fixed width 
+                    and fluid width within the same page.
+                </p>
+                <p>Want to learn more about Responsive Web Design? Check out SitePoint's new book, <a href="">Jump Start Responsive Web Design!</a></p>
+            </section>
+
+            <aside class="shareLink">
+                <h3>Share This Article</h3>
+                <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                <a href=""><i class="fa-brands fa-discord"></i></a>
+                <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+            </aside>
+
+            <aside>
+                <div class="box">
+                    <div class="avatar">
+                        <img src="./images/author-img.jpg" alt="author-img">
+                    </div>
+                    <div class="moreDetail">
+                        <p><a href="">Annarita Tranfici</a></p>
+                        <p>I have a Bachelor's degree in European languages, cultures, and literature from the University of Naples. I'm passionate about graphics and 
+                            web design, and for several years I've been working on projects and designs for many companies. I'm a writer for the <a href="">Audero 
+                            User Group;</a> my specialties are HTML, CSS, Web Design, and Adobe Photoshop.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex">
+                    <a href="">Interface Design</a>
+                    <a href="">Responsive Des</a>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <aside class="up-next">
+        <div class="up-next-box">
+            <h2>Up Next</h2>
+            <div class="grid">
+                <article>
+                    <div class="make-logo">
+                        <a href="#"><i class="fa-brands fa-css3"></i></a>
+                    </div>
+                    <div class="htl">
+                        <p><a href="#">Build a Responsive, Mobile-Friendly Website from Scratch: Responsive Rules</a></p>
+                        <p><a href="#">Annarita Tranfici</a></p>
+                    </div>
+                </article>
+                <article>
+                    <div class="make-logo">
+                        <a href="#"><i class="fa-brands fa-css3"></i></a>
+                    </div>
+                    <div class="htl">
+                        <p><a href="">Understanding Responsive Web Design: Responsive Imagery</a></p>
+                        <p><a href="">Annarita Tranfici</a></p>
+                    </div>
+                </article>
+                <article>
+                    <div class="make-logo">
+                        <a href=""><i class="fa-brands fa-css3"></i></a>
+                    </div>
+                    <div class="htl">
+                        <p><a href="">Design Responsively With Malleable Mobile Menus</a></p>
+                        <p><a href="">Tara Hornor</a></p>
+                    </div>
+                </article>
+                <article>
+                    <div class="make-logo">
+                        <a href=""><i class="fa-brands fa-css3"></i></a>
+                    </div>
+                    <div class="htl">
+                        <p><a href="">Understanding Responsive Web Design: Clear Concepts and Practical Applications</a></p>
+                        <p><a href="">Annarita Tranfici</a></p>
+                    </div>
+                </article>
+                <article>
+                    <div class="make-logo">
+                        <a href=""><i class="fa-brands fa-css3"></i></a>
+                    </div>
+                    <div class="htl">
+                        <p><a href="">Time for a Responsive Web!: 11 Responsive Design Resources</a></p>
+                        <p><a href="">Tara Hornor</a></p>
+                    </div>
+                </article>
+                <article>
+                    <div class="make-logo">
+                        <a href=""><i class="fa-brands fa-css3"></i></a>
+                    </div>
+                    <div class="htl">
+                        <p><a href="">Designing Responsively: Fundamental Practices</a></p>
+                        <p><a href="">Zsombor Markus</a></p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </aside>
+
+    <div class="advertising"></div>
+
+    <aside class="footer">
+        <div class="footer-box">
+            <div class="footer-links">
+                <ul>
+                    <h2>Stuff we do</h2>
+                    <li><a href="">Premium</a></li>
+                    <li><a href="">Newsletters</a></li>
+                    <li><a href="">Forums</a></li>
+                </ul>
+                <ul>
+                    <h2>About</h2>
+                    <li><a href="">Our story</a></li>
+                    <li><a href="">Terms of use</a></li>
+                    <li><a href="">Privacy policy</a></li>
+                    <li><a href="">Corporate memberships</a></li>
+                </ul>
+                <ul>
+                    <h2>Contact</h2>
+                    <li><a href="">Contact us</a></li>
+                    <li><a href="">FAQ</a></li>
+                    <li><a href="">Publish your book with us</a></li>
+                    <li><a href="">Write an article for us</a></li>
+                    <li><a href="">Advertise</a></li>
+                </ul>
+            </div>
+            <div class="footer-extra">
+                <h2>Connect</h2>
+                <div class="footer-extra-links">
+                    <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-square-twitter"></i></a>
+                    <a href=""><i class="fa-solid fa-square-rss"></i></a>
+                </div>
+                <div>
+                    <p>&copy; 2000 - 2022 SitePoint Pty. Ltd</p>
+                    <p>This site is protected by reCAPTCHA and the
+                        Google<a href="">Privacy Policy</a>and<a>Terms of Service</a>apply.</p>
+                </div>
+            </div>
+        </div> 
+    </aside>
+</body>
+</html>

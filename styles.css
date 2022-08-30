@@ -1,0 +1,632 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Poppins', sans-serif; */
+    font-family: 'Roboto', sans-serif;
+}
+
+/*===============================================================*/
+.notification {
+    background-color: rgb(114,50,250);
+    text-align: center;
+    color: #fff;
+    font-size: 26px;
+    position: relative;
+    display: none;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.notification>p {
+    display: inline-block;
+}
+.notification>p>span {
+    font-weight: bold;
+}
+.notification>a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 40px;
+    background-color: rgb(255,0,216);
+    padding: 0 25px;
+    border-radius: 5px;
+    margin: 10px 60px 10px 10px;
+}
+.notification>button {
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    right: 20px;
+    top: calc(50% - 20px);
+}
+.notification>button:hover {
+    cursor: pointer;
+}
+.notification>button>i {
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+}
+/*===================================================================*/
+.fs-site {
+    background-color: rgb(35,35,35);
+}
+.fs-box {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1250px;
+    padding: 10px 20px;
+    margin: 0 auto;
+}
+/*--------------------------------------------*/
+.fs-site .fs-box .left a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 32px;
+    line-height: 50px;
+}
+.fs-site .left {
+    display: inline-block;
+}
+.fs-site .left:hover {
+    cursor: pointer;
+}
+
+/*---------------------------------------------*/
+.fs-site .right {
+    display: inline-block;
+}
+.fs-site .right ul {
+    list-style-type: none;
+}
+.fs-site .right ul li {
+    display: inline-block;
+    color: white;
+    line-height: 50px;
+}
+.fs-site .right ul li a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 0 20px;
+}
+.fs-site .fs-box .right ul li a:hover {
+    color: rgb(142, 95, 241);
+}
+.fs-site .fs-box .right ul li:last-child a{
+    color: #fff;
+    background-color: rgb(114,50,250);
+    border-radius: 2px;
+}
+.fs-site .fs-box .right ul li:last-child a:hover{
+    background-color: rgb(142, 95, 241);
+}
+.fs-site .fs-box .right {
+    display: none;
+}
+/*----------------------------------------------*/
+.fs-site .fs-box .menu-icon button {
+    border: none;
+    background-color: transparent;
+}
+.fs-site .fs-box .menu-icon button:hover {
+    cursor: pointer;
+}
+.fs-site .fs-box .menu-icon i {
+    color: #fff;
+    line-height: 50px;
+    font-size: 32px;
+}
+/*===================================================================*/
+.navlink {
+    display: none;
+    background-color: #fff;
+    border-bottom: 2px solid rgb(224,223,225);
+    justify-content: space-around;
+}
+.navlink-box {
+    margin: 0 auto;
+    max-width: 1250px;
+    min-width: 1100px;
+}
+.navlink ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+.navlink ul li {
+    display: inline-block;
+    width: auto;
+}
+.navlink ul li a {
+    display: inline-block;
+    text-decoration: none;
+    color: #000;
+    line-height: 45px;
+    font-size: 18px;
+    font-weight: 500;
+}
+.navlink ul li a:hover {
+    color: rgb(142, 95, 241);
+}
+
+.navlink ul li button {
+    border: none;
+    background-color: transparent;
+    margin-left: 100px;
+    margin-right: 25px;
+}
+.navlink ul li button:hover {
+    cursor: pointer;
+}
+.navlink ul li button i {
+    line-height: 50px;
+    font-size: 22px;
+}
+/*------------------------------------------------*/
+.search {
+    display: none;
+    margin: 0 auto;
+    width: 55%;
+}
+.search input {
+    width: 90%;
+    height: 32px;
+    display: inline-block;
+    padding-left: 10px;
+    margin-right: 15px;
+    font-size: 16px;
+}
+.search button {
+    display: inline-block;
+    border: none;
+    background-color: transparent;
+}
+.search button:hover {
+    cursor: pointer;
+    color:rgb(142, 95, 241);
+}
+.search button i {
+    font-size: 25px;
+    line-height: 50px;
+}
+/*===================================================================*/
+.dropdown--list {
+    background-color: rgb(55,54,58);
+    display: none;
+    
+}
+.dropdown-box {
+    padding: 20px;
+}
+.dropdown-box input {
+    color: #fff;
+    width: 100%;
+    height: 36px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(165, 162, 162);
+    background-color: transparent;
+}
+.dropdown-box ul {
+    list-style-type: none;
+}
+.dropdown-box>ul>li:hover {
+    background-color: rgb(78,77,81);
+}
+.dropdown-box>ul>li>a{
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 8px 10px;
+}
+.dropdown-box>ul>li:last-child {
+    display: inline-block;
+    color: #fff;
+    background-color: rgb(114,50,250);
+    border-radius: 2px;
+    padding: 5px;
+    margin-top: 8px;
+}
+.dropdown-box>ul>li:last-child:hover {
+    background-color: rgb(142, 95, 241);
+}
+/*---------------------------------------------*/
+.dropdown-box>ul>ul {
+    list-style-type: none;
+    margin-left: 25px;
+}
+.dropdown-box>ul>ul>li:hover {
+    background-color: rgb(78,77,81);
+}
+.dropdown-box>ul>ul>li>a {
+    display: block;
+    text-decoration: none;
+    color: rgb(191,190,193);
+    font-size: 18px;
+    padding: 5px 10px;
+}
+/*================================== Main Section =================================*/
+main {
+    margin: 40px;
+}
+.main-box {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+main .main-box>a:first-child {
+    display: block;
+    color: rgb(114,50,250);
+    text-decoration: none;
+    padding-bottom: 10px;
+}
+main .main-box>a:hover {
+    color: rgb(144, 95, 250);
+}
+h1 {
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+main .main-box>a:nth-child(3), main .main-box>a:nth-child(4) {
+    background-color:rgb(224,223,225);
+    text-decoration: none;
+    padding: 5px 8px;
+    color: #000;
+    font-size: 16px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+main .main-box>a:nth-child(3):hover, main .main-box>a:nth-child(4):hover {
+    color: rgb(114,50,250);
+    background-color: rgb(243, 237, 250);
+}
+main .main-box p {
+    color: rgb(75,75,75);
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+}
+/*--------------------------------------------*/
+.info_box {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+
+}
+.info_box .author img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    float: left;
+}
+.info_box .author .info {
+    display: inline-block;
+    padding-left: 10px;
+}
+.info p:first-child a{
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.info p:first-child a:hover {
+    color: rgb(141,141,141);
+}
+.info p:nth-child(2) {
+    font-size: 16px;
+    line-height: 20px;
+}
+/*-----------------------------------------*/
+.info_box .info_link {
+    display: flex;
+    vertical-align: middle;
+}
+.info_box .info_link span {
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 4px;
+    line-height: 50px;
+    vertical-align: middle;
+}
+.info_box .info_link a{
+    color: #000;
+    font-size: 25px;
+    margin:auto 2px;
+    transition: font-size .2s;
+}
+.info_box .info_link a:hover {
+    font-size: 30px;
+}
+/*-----------------------------------------*/
+.summary>p:first-child {
+    padding-left: 20px;
+    border-left: 4px solid rgb(114,50,250);
+    margin-bottom: 28px;
+}
+/*------------------------------------------*/
+section {
+    margin-top: 30px;
+}
+section h3 {
+    padding-bottom: 20px;
+    font-size: 32px;
+    font-weight: 400;
+}
+section p {
+    padding-bottom: 30px;
+}
+section p:last-child {
+    padding-bottom: 20px;
+}
+section p span {
+    background-color:rgb(224,223,225); 
+    color: #000;
+    padding: 3px 5px;
+    border-radius:2px;
+    font-weight: 400;
+}
+section p a {
+    text-decoration: none;
+    color: rgb(95,57,175);
+    font-weight: 500;
+    font-style: italic;
+}
+section p a:hover {
+    color: rgb(142, 95, 241);
+}
+/*===================================================================*/
+aside.shareLink {
+    margin-bottom: 40px;
+}
+aside.shareLink h3 {
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+aside.shareLink a {
+    font-size: 25px;
+    color: rgb(114,50,250);
+    margin:0 8px;
+    line-height: 50px;
+    transition: font-size 0.2s;
+    vertical-align: middle;
+}
+aside.shareLink a:hover {
+    font-size: 30px;
+}
+/*===================================================================*/
+aside .box {
+    border: 2px solid rgb(191,190,193);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 8fr;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+aside .box .avatar>img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+}
+aside .box .moreDetail p:first-child a{
+    color: #000;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+aside .box .moreDetail p:first-child a:hover {
+    color: rgb(110, 110, 110);
+    cursor: pointer;
+}
+aside .box .moreDetail p:last-child a {
+    text-decoration: none;
+    color: rgb(95,57,175);
+    font-weight: 500;
+}
+aside .box .moreDetail p:last-child a:hover {
+    color: rgb(142, 95, 241);
+}
+/*-------------------------------------------*/
+aside .flex {
+    margin-bottom: 40px;
+}
+aside .flex a{
+    background-color:rgb(224,223,225);
+    text-decoration: none;
+    padding: 5px 8px;
+    color: #000;
+    font-size: 18px;
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+aside .flex a:hover {
+    color: rgb(114,50,250);
+    background-color: rgb(243, 237, 250);
+}
+/*================================= Up Next Section ==================================*/
+.up-next {
+    margin-bottom: 80px;
+}
+.up-next .up-next-box {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+.up-next h2 {
+    font-size: 32px;
+    margin: 20px;
+}
+.up-next .grid {
+    margin: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.up-next .grid article {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    column-gap: 15px;
+}
+/*------------------------------------------------*/
+.make-logo {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(58,58,58);
+}
+.make-logo i {
+    font-size: 46px;
+    color: rgb(58, 58, 58);
+    text-shadow: 0 0 10px rgb(207, 231, 227);
+    transform: translate(50%, 50%);
+}
+.htl p:first-child a{
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #000;
+    text-decoration: none;
+    transition: color 0.1s;
+}
+.htl p:first-child a:hover {
+    color: rgb(110, 110, 110);
+}
+.htl p:last-child a {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(141,141,141);
+    text-decoration: none;
+    transition: color 0.1s;
+}
+.htl p:last-child a:hover {
+    color: rgb(142, 95, 241);
+}
+/*====================================== Footer Section =============================*/
+.footer {
+    background-color: rgb(35,32,35);
+    padding: 50px;
+}
+.footer-box {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+.footer h2 {
+    color: #fff;
+
+}
+.footer-links {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-links ul li, .footer-extra ul li{
+    color: rgb(141,141,141);
+    font-size: 20px;
+    margin: 20px;
+}
+.footer-links ul li a, .footer-extra ul li a{
+    color:rgb(141,141,141);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+}
+.footer-links ul li a:hover, .footer-extra ul li a:hover{
+    color: rgb(146, 231, 247);
+}
+/*-----------------------------------------*/
+.footer-extra {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+}
+.footer-extra .footer-extra-links a{
+    color: rgb(165, 162, 162);
+    font-size: 26px;
+    margin: 0 7px;
+}
+.footer-extra div p:first-child {
+    color: rgb(162,162,162);
+    line-height: 20px;
+    padding-bottom: 10px;
+}
+.footer-extra div p:last-child {
+    line-height: 20px;
+    color: rgb(162,162,162);
+    font-size: 14px;
+}
+.footer-extra div p:last-child a {
+    font-weight: 600;
+    margin: 0;
+    color: rgb(165, 162, 162);
+    text-decoration: none;
+}
+.footer-extra div p:last-child a:hover {
+    font-weight: 600;
+    color: rgb(146, 231, 247);
+}
+
+/*===================================================================================*/
+@media screen and (min-width: 648px) {  /*notification*/
+    .notification {
+        display: block;
+    }
+    .footer-extra {
+        flex-wrap: nowrap;
+    }
+    
+}
+
+@media screen and (min-width: 768px) {
+    .up-next .grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .htl p:first-child a{
+        font-size: 18px;
+    }
+}
+@media screen and (min-width: 992px) {
+    .htl p:first-child a{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 1025px) { /*hidden feature*/
+    .fs-site .fs-box .right {
+        display: inline-block;
+    }
+    .navlink {
+        display: block;
+    }
+    .fs-site .fs-box .menu-icon {
+        display: none;
+    }
+    .dropdown--list {
+        display: none !important;
+    }
+}
+
+@media screen and (min-width: 1250px) { /*change font-size*/
+    .up-next .grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .htl p:first-child a{
+        font-size: 20px;
+    }
+}
